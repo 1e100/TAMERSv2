@@ -4,14 +4,14 @@ The training of this model was done on two machines thanks to preprocessing some
 All training was done on Ubuntu Server 24.04 LTS and CUDA 13.0.
 
 Machine 1:
-CPU: Ryzen Threadripper 2970WX 24-Core Processor
-GPU: 3 x rtx 3090 24gb, 1 x rtx 3090ti 24gb
-Memory: 128gb DDR4 3600MHz ECC
+* CPU: Ryzen Threadripper 2970WX 24-Core Processor
+* GPU: 3 x rtx 3090 24gb, 1 x rtx 3090ti 24gb
+* Memory: 128gb DDR4 3600MHz ECC
 
 Machine 2:
-CPU: Ryzen 7 5800x 8-core Processor
-GPU: 1 x rtx 5070 12gb
-Memory: 64gb DDR4 3600MHz Non-ECC
+* CPU: Ryzen 7 5800x 8-core Processor
+* GPU: 1 x rtx 5070 12gb
+* Memory: 64gb DDR4 3600MHz Non-ECC
 # Requirements
 - `ffmpeg` (6->8)
 - `uv`
@@ -86,7 +86,7 @@ uv run torchrun --nproc_per_node=1 train_slm.py \
   --checkpoint checkpoints/slm_stage3_epoch049_with_splits.pt \
   --resume
 ```
-3. 150 epochs (renamed to slm_stage3_epoch099_best.pt)
+3. 150 epochs (renamed to `slm_stage3_epoch099_best.pt`)
 ```bash
 uv run torchrun --nproc_per_node=1 train_slm.py \
   --num-emotions 36 \
